@@ -5,35 +5,47 @@
   <!-- Name of the robot description parameter -->
   <arg name="description_name"         default="to_description"/>
   <!-- Set robot description path -->
-  <arg name="description_file"         default="$(find to_description)/urdf/to.urdf"/>
+  <arg name="model"         default="$(find to_description)/urdf/to.urdf"/>
   <!-- Joint state topic name -->
-  <arg name="joint_states_topic"       default="/joint_states"/>
+  <!-- <arg name="joint_states_topic"       default="/joint_states"/> -->
 
-  <!-- Load robot description -->
-  <include file="$(find to_description)/launch/load.launch">
-    <arg name="description_name" value="$(arg description_name)"/>
-    <arg name="description_file" value="$(arg description_file)"/>
-  </include>
-
-  <!-- Joint state publisher -->
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen">
-    <param name="use_gui"           value="true"/>
-    <param name="rate"              value="100"/>
-    <remap from="robot_description" to="$(arg description_name)"/>
-    <remap from="joint_states"      to="$(arg joint_states_topic)"/>
+  <param 
+        name="robot_description" 
+        command="$(find xacro)/xacro $(arg model)"
+  />
+  <!-- publicando states -->
+  <node 
+      pkg="robot_state_publisher" 
+      type="robot_state_publisher" 
+      name="rob_pub">
   </node>
 
-  <!-- Robot state publisher -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
-    <param name="publish_frequency" value="100"/>
-    <param name="use_tf_static"     value="true"/>
-    <remap from="robot_description" to="$(arg description_name)"/>
-    <remap from="joint_states"      to="$(arg joint_states_topic)"/>
+  <node 
+      pkg="joint_state_publisher_gui" 
+      type="joint_state_publisher_gui" 
+      name="joint_state">
+      
   </node>
-
   <!-- RViz -->
   <node name="rviz" pkg="rviz" type="rviz"
-        args="-d $(find anymal_b_simple_description)/config/rviz/standalone.rviz"
+  args="-d $(find to_description)/config/rviz/to_config_rviz.rviz"
         output="screen"/>
 
+  <!-- ///////////////////////////////////////////////////////////////      -->
+    <!-- Init Gazebo  -->
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+        <arg name="use_sim_time" value="true"/>
+    </include>  -->
+
+    <!-- Spawn of robot inside Gazebo -->
+    <!-- <node 
+        pkg="gazebo_ros" 
+        type="spawn_model" 
+        name="spawn_robot"
+        respawn="false"
+        args="  -param robot_description
+                -urdf
+                -model robot_prueba"
+    /> -->
 </launch>
