@@ -168,6 +168,37 @@
       <child link="LF_FT" />
       <origin xyz="0.0 0.0304 -0.192206" rpy="0 0 0"/>
    </joint>
+   <!-- Transmission leg -->
+   <transmission name="LF_ABD_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LF_ABD">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LF_ABD_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LF_FLX1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LF_FLX1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LF_FLX1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LF_FLX2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LF_FLX2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LF_FLX2_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
    <!-- ****************************** Pata frente derecha ***************** -->
    <!-- Link AB rigth front -->
    <link name="RF_HIP">
@@ -294,6 +325,37 @@
       <child link="RF_FT" />
       <origin xyz="0.0 -0.0304 -0.192206" rpy="0 0 0"/>
    </joint>
+   <!-- Transmission leg -->
+   <transmission name="RF_ABD_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RF_ABD">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RF_ABD_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RF_FLX1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RF_FLX1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RF_FLX1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RF_FLX2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RF_FLX2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RF_FLX2_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
    <!-- ****************************** Pata trasera izquierda ***************** -->
    <!-- Link AB left rear -->
    <link name="LR_HIP">
@@ -419,6 +481,37 @@
       <child link="LR_FT" />
       <origin xyz="0.0 0.0304 -0.192206" rpy="0 0 0"/>
    </joint>
+   <!-- Transmission leg -->
+   <transmission name="LR_ABD_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LR_ABD">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LR_ABD_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LR_FLX1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LR_FLX1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LR_FLX1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LR_FLX2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LR_FLX2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="LR_FLX2_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
    <!-- ****************************** Pata trasera derecha ***************** -->
    <!-- Link AB rigth rear -->
    <link name="RR_HIP">
@@ -545,15 +638,42 @@
       <child link="RR_FT" />
       <origin xyz="0.0 -0.0304 -0.192206" rpy="0 0 0"/>
    </joint>
-   <!-- <transmission name="LF_HAA_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="LF_HAA">
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="LF_HAA_actuator">
-         <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-         <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-   </transmission>  -->
+   <!-- Transmission leg -->
+   <transmission name="RR_ABD_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_ABD">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_ABD_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RR_FLX1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_FLX1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_FLX1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RR_FLX2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RR_FLX2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="RR_FLX2_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+   <!-- Gazebo plugin -->
+   <gazebo>
+      <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+         <legacyModeNS>true</legacyModeNS>
+      </plugin>
+   </gazebo>
 
 </robot>
