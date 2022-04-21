@@ -181,7 +181,7 @@
   </transmission>
   <transmission name="LF_FLX1_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="LF_FLX1">
+    <joint name="LF_HF1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="LF_FLX1_motor">
@@ -191,7 +191,7 @@
   </transmission>
   <transmission name="LF_FLX2_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="LF_FLX2">
+    <joint name="LF_FF2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="LF_FLX2_motor">
@@ -338,7 +338,7 @@
   </transmission>
   <transmission name="RF_FLX1_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="RF_FLX1">
+    <joint name="RF_HF1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="RF_FLX1_motor">
@@ -348,7 +348,7 @@
   </transmission>
   <transmission name="RF_FLX2_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="RF_FLX2">
+    <joint name="RF_FF2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="RF_FLX2_motor">
@@ -494,7 +494,7 @@
   </transmission>
   <transmission name="LR_FLX1_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="LR_FLX1">
+    <joint name="LR_HF1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="LR_FLX1_motor">
@@ -504,7 +504,7 @@
   </transmission>
   <transmission name="LR_FLX2_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="LR_FLX2">
+    <joint name="LR_FF2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="LR_FLX2_motor">
@@ -651,7 +651,7 @@
   </transmission>
   <transmission name="RR_FLX1_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="RR_FLX1">
+    <joint name="RR_HF1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="RR_FLX1_motor">
@@ -661,7 +661,7 @@
   </transmission>
   <transmission name="RR_FLX2_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="RR_FLX2">
+    <joint name="RR_FF2">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="RR_FLX2_motor">
